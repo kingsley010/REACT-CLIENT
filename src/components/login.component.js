@@ -8,7 +8,7 @@ import AuthService from "../services/auth.service";
 const required = value => {
   if (!value) {
     return (
-      <div className="alert alert-danger" role="alert">
+      <div className="alert alert-danger">
         This field is required!
       </div>
     );
@@ -133,7 +133,7 @@ export default class Login extends Component {
 
             {this.state.message && (
               <div className="form-group">
-                <div className="alert alert-danger" role="alert">
+                <div className="alert alert-danger">
                   {this.state.message}
                 </div>
               </div>

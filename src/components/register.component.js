@@ -9,7 +9,7 @@ import AuthService from "../services/auth.service";
 const required = value => {
   if (!value) {
     return (
-      <div className="alert alert-danger" role="alert">
+      <div className="alert alert-danger">
         This field is required!
       </div>
     );
@@ -19,7 +19,7 @@ const required = value => {
 const email = value => {
   if (!isEmail(value)) {
     return (
-      <div className="alert alert-danger" role="alert">
+      <div className="alert alert-danger">
         This is not a valid email.
       </div>
     );
@@ -29,7 +29,7 @@ const email = value => {
 const vusername = value => {
   if (value.length < 3 || value.length > 20) {
     return (
-      <div className="alert alert-danger" role="alert">
+      <div className="alert alert-danger">
         The username must be between 3 and 20 characters.
       </div>
     );
@@ -39,7 +39,7 @@ const vusername = value => {
 const vpassword = value => {
   if (value.length < 6 || value.length > 40) {
     return (
-      <div className="alert alert-danger" role="alert">
+      <div className="alert alert-danger">
         The password must be between 6 and 40 characters.
       </div>
     );
@@ -188,7 +188,6 @@ export default class Register extends Component {
                       ? "alert alert-success"
                       : "alert alert-danger"
                   }
-                  role="alert"
                 >
                   {this.state.message}
                 </div>
